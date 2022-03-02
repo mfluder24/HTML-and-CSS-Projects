@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-	<link rel="stylesheet" type="text/css" href="./css/one_page_website.css">
+	
 	<head>
 		<meta charset="utf-8">
 		<title>Mykiss Mists Sanctuary</title>
+		<link rel="stylesheet" type="text/css" href="./css/one_page_website.css">
+		<script src="JS/one_page_website.js" defer></script>
 	</head>
 	<body>
 	
@@ -41,6 +43,8 @@
 					Here at Mykiss we focus on education, appreciation, and fun! We have a full staff of USFWS and USDA Forest Service Rangers to help guide and educate people of all ages about the beauty and importance of the outdoors.<br>
 					We love and protect our finned friends here, and <strong>do not allow fishing on-site</strong>.<br>
 					For more information on our educational resources, events, or camping availability please visit our contact section.</p>
+					<br>
+					<img class="icon" src="./images/img/trout.png">
 				</div>	
 			</div>
 		</div>
@@ -59,6 +63,8 @@
 		</div>
 	</section>
 	<!--END VIDEO-->
+
+
 	
 	<!--GALLERY-->
 	<section id="gallery">
@@ -66,58 +72,83 @@
 			<h1>Gallery</h1>
 			<div class="flex-container">
 			
-				<!--PHOTO-CONTAINER 1-->
-				<div class="photo-container">
-					<div class="photo">
-					<img src="./images/thumb/thumbnail_1.jpg" alt="A juvenile Rainbow Trout">
-					</div>
-				</div>
-				<!--END PHOTO-CONTAINER 1-->
-				
-				<!--PHOTO-CONTAINER 2-->
-				<div class="photo-container">
-					<div class="photo">
-					<img src="./images/thumb/thumbnail_2.jpg" alt="A section of protected stream and forest">
-					
-					</div>
-				</div>
-				<!--END PHOTO-CONTAINER 2-->
-				
-				<!--PHOTO-CONTAINER 3-->
-				<div class="photo-container">
-					<div class="photo">
-					<img src="./images/thumb/thumbnail_3.jpg" alt="Our resident O. mykiss Mark!">
-						
-					</div>
-				</div>
-				<!--END PHOTO-CONTAINER 3-->
-				
-				<!--PHOTO-CONTAINER 4-->
-				<div class="photo-container">
-					<div class="photo">
-					<img src="./images/thumb/thumbnail_4.jpg" alt="One of our research cabins by the river">
-						
-					</div>
-				</div>
-				<!--END PHOTO-CONTAINER 4-->
-				
-				<!--PHOTO-CONTAINER 5-->
-				<div class="photo-container">
-					<div class="photo">
-					<img src="./images/thumb/thumbnail_5.jpg" alt="A Ranger giving an educational presentation">
-						
-					</div>
-				</div>
-				<!--END PHOTO-CONTAINER 5-->
-				
-				<!--PHOTO-CONTAINER 6-->
-				<div class="photo-container">
-					<div class="photo">
-					<img src="./images/thumb/thumbnail_6.jpg" alt="On river camping in our sanctuary">
-						
-					</div>
-				</div>
-				<!--END PHOTO-CONTAINER 6-->
+	<div class="row">
+		<div class="column">
+			<img src="./images/thumb/thumbnail_1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="./images/thumb/thumbnail_2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="./images/thumb/thumbnail_3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="./images/thumb/thumbnail_4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="./images/thumb/thumbnail_5.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="./images/thumb/thumbnail_6.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
+		</div>
+	</div>
+
+	<div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
+
+			<div class="mySlides">
+				<div class="numbertext">1 / 6</div>
+				<img src="./images/img/img_1.jpg" style="width:100%">
+			</div>
+			<div class="mySlides">
+				<div class="numbertext">2 / 6</div>
+				<img src="./images/img/img_2.jpg" style="width:100%">
+			</div>
+			<div class="mySlides">
+				<div class="numbertext">3 / 6</div>
+				<img src="./images/img/img_3.jpg" style="width:100%">
+			</div>
+			<div class="mySlides">
+				<div class="numbertext">4 / 6</div>
+				<img src="./images/img/img_4.jpg" style="width:100%">
+			</div>
+			<div class="mySlides">
+				<div class="numbertext">5 / 6</div>
+				<img src="./images/img/img_5.jpg" style="width:100%">
+			</div>
+			<div class="mySlides">
+				<div class="numbertext">6 / 6</div>
+				<img src="./images/img/img_6.jpg" style="width:100%">
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			<div class="caption-container">
+				<p id="caption"></p>
+			</div>
+			
+			<div class="column">
+				<img class="demo" src="./images/thumb/thumbnail_1.jpg" onclick="currentSlide(1)" alt="A juvenile Rainbow Trout">
+			</div>
+			<div class="column">
+				<img class="demo" src="./images/thumb/thumbnail_2.jpg" onclick="currentSlide(2)" alt="A section of protected stream and forest">
+			</div>
+			<div class="column">
+				<img class="demo" src="./images/thumb/thumbnail_3.jpg" onclick="currentSlide(3)" alt="Our resident O. mykiss Mark!">
+			</div>
+			<div class="column">
+				<img class="demo" src="./images/thumb/thumbnail_4.jpg" onclick="currentSlide(4)" alt="One of our research cabins by the river">
+			</div>
+			<div class="column">
+				<img class="demo" src="./images/thumb/thumbnail_5.jpg" onclick="currentSlide(5)" alt="A Ranger giving an educational presentation">
+			</div>
+			<div class="column">
+				<img class="demo" src="./images/thumb/thumbnail_6.jpg" onclick="currentSlide(6)" alt="On river camping in our sanctuary">
+			</div>
+		</div>
+	</div>
 				
 			</div>
 		</div>
